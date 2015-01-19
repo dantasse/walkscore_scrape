@@ -27,8 +27,8 @@ if __name__ == '__main__':
     # make for a cleaner end result, but this way at least you have something.
     jsonfile = open('json_walkscores.csv', 'w')
     lines = []
-    for lat in numpy.arange(args.min_lat, args.max_lat, .1): #.005):
-        for lon in numpy.arange(args.min_lon, args.max_lon, .1): # .005):
+    for lat in numpy.arange(args.min_lat, args.max_lat, .005):
+        for lon in numpy.arange(args.min_lon, args.max_lon, .005):
             params = {'format': 'json', 'lat': lat, 'lon': lon,
                 'wsapikey': walkscore_api_key}
             res = requests.get('http://api.walkscore.com/score', params=params).json()

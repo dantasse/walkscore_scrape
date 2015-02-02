@@ -13,10 +13,10 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     # Defaults are rough Pittsburgh boundaries.
-    parser.add_argument('--min_lat', type=float, default=40.341667)
-    parser.add_argument('--max_lat', type=float, default=40.541667)
-    parser.add_argument('--min_lon', type=float, default=-80.1)
-    parser.add_argument('--max_lon', type=float, default=-79.9)
+    parser.add_argument('--min_lat', type=float, default=40.241667)
+    parser.add_argument('--max_lat', type=float, default=40.641667)
+    parser.add_argument('--min_lon', type=float, default=-80.2)
+    parser.add_argument('--max_lon', type=float, default=-79.8)
     parser.add_argument('--outfile', default='walkscores.csv')
     parser.add_argument('--sleep_time', type=int, default=2,
         help='how long, in seconds, to sleep between each request')

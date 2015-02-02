@@ -46,5 +46,8 @@ if __name__ == '__main__':
     writer = csv.DictWriter(open(args.outfile, 'w'), fieldnames=fieldnames)
     writer.writeheader()
     for line in lines:
+        line = {'snapped_lat': line['snapped_lat'], 'snapped_lon': line['snapped_lon'],
+            'status': line['status'], 'walkscore': line['walkscore'],
+            'description': line['description'], 'updated': line['updated']}
         writer.writerow(line)
         
